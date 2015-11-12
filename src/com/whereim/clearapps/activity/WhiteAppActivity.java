@@ -7,7 +7,7 @@ import java.util.Map;
 
 import com.fljr.frame.EventBus;
 import com.whereim.clearapps.AppActivity;
-import com.whereim.clearapps.R;
+import com.whereim.clearapp.R;
 import com.whereim.clearapps.adapter.AppListAdapter;
 import com.whereim.clearapps.bean.PackageBean;
 import com.whereim.clearapps.params.EventParams;

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.whereim.clearapps.R;
+import com.whereim.clearapp.R;
 import com.whereim.clearapps.bean.PackageBean;
 import com.whereim.clearapps.utils.CmdUtils;
 

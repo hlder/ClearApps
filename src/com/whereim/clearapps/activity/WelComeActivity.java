@@ -8,7 +8,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.view.Window;
 
-import com.whereim.clearapps.R;
+import com.whereim.clearapp.R;
 import com.whereim.clearapps.bean.PackageBean;
 import com.whereim.clearapps.utils.DbFactory;
 

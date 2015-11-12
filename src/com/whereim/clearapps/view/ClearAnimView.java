@@ -1,6 +1,6 @@
 package com.whereim.clearapps.view;
 
-import com.whereim.clearapps.R;
+import com.whereim.clearapp.R;
 
 import android.content.Context;
 import android.graphics.Bitmap;

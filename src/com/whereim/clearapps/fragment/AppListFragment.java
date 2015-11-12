@@ -17,7 +17,7 @@ import android.widget.Toast;
 import com.fljr.frame.EventBus;
 import com.fljr.frame.Fragment;
 import com.fljr.frame.eventbus.EventBusListener;
-import com.whereim.clearapps.R;
+import com.whereim.clearapp.R;
 import com.whereim.clearapps.adapter.AppListAdapter;
 import com.whereim.clearapps.bean.PackageBean;
 import com.whereim.clearapps.params.EventParams;

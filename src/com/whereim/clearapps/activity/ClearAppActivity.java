@@ -1,6 +1,6 @@
 package com.whereim.clearapps.activity;
 
-import com.whereim.clearapps.R;
+import com.whereim.clearapp.R;
 import com.whereim.clearapps.view.ClearAnimView;
 
 import android.app.Activity;

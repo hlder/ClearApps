@@ -9,7 +9,7 @@ import com.fljr.frame.EventBus;
 import com.fljr.frame.eventbus.EventBusListener;
 import com.fljr.frame.fragment.FragmentTabHostFrame;
 import com.whereim.clearapps.AppActivity;
-import com.whereim.clearapps.R;
+import com.whereim.clearapp.R;
 import com.whereim.clearapps.bean.PackageBean;
 import com.whereim.clearapps.fragment.AppListFragment;
 import com.whereim.clearapps.params.EventParams;
