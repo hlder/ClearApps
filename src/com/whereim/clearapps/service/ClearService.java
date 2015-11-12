@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import com.fljr.frame.EventBus;
 import com.whereim.clearapp.R;
 import com.whereim.clearapps.bean.PackageBean;
+import com.whereim.clearapps.params.EventParams;
 import com.whereim.clearapps.utils.CmdUtils;
 
 import android.app.Service;
@@ -56,6 +58,7 @@ public class ClearService extends Service{
 					Toast.makeText(ClearService.this, clearFail, Toast.LENGTH_SHORT).show();
 					break;
 				}
+	    		EventBus.post(EventParams.ACTION_CLEAR_OVER, true);
 	    		ClearService.this.stopSelf();
 	    	}
 	    };

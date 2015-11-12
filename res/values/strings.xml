@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <string name="app_name">ClearApps</string>
     <string name="hello_world">Hello world!</string>
@@ -17,4 +17,8 @@
     
     <string name="toast_clear_success">清理成功</string>
     <string name="toast_clear_fail">清理失败</string>
+    
+    <string name="btn_clear">点击清理</string>
+    <string name="btn_clearing" tools:ignore="TypographyEllipsis">正在清理...</string>
+    
 </resources>

@@ -62,8 +62,15 @@ public class ClearAnimView extends RelativeLayout{
 	
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-//		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-		super.onMeasure(MeasureSpec.makeMeasureSpec(w, MeasureSpec.getMode(widthMeasureSpec)),MeasureSpec.makeMeasureSpec(h, MeasureSpec.getMode(heightMeasureSpec)));
+		int wms=MeasureSpec.makeMeasureSpec(w, MeasureSpec.getMode(widthMeasureSpec));
+		int hms=MeasureSpec.makeMeasureSpec(h, MeasureSpec.getMode(heightMeasureSpec));
+		if(MeasureSpec.getMode(widthMeasureSpec)==MeasureSpec.EXACTLY){
+			wms=widthMeasureSpec;
+		}
+		if(MeasureSpec.getMode(heightMeasureSpec)==MeasureSpec.EXACTLY){
+			hms=heightMeasureSpec;
+		}
+		super.onMeasure(wms,hms);
 	}
 	
 	public ClearAnimView(Context context) {

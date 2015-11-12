@@ -4,19 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#009900"
-        android:gravity="center"
         android:orientation="vertical"
         tools:ignore="UselessParent" >
-
+		<TextView 
+		    android:id="@+id/txtStatus"
+		    android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_centerInParent="true"
+        	android:textColor="@android:color/white"
+        	android:text="@string/btn_clear"/>
         <com.whereim.clearapps.view.ClearAnimView
             android:id="@+id/clearAnimView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_width="150dip"
+            android:layout_height="150dip" 
+        	android:layout_centerInParent="true">
         </com.whereim.clearapps.view.ClearAnimView>
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>
