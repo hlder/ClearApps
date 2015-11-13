@@ -16,7 +16,8 @@
     <string name="msg_remove_success">已经移除白名单</string>
     
     <string name="toast_clear_success">清理成功</string>
-    <string name="toast_clear_fail">清理失败</string>
+    <string name="toast_clear_fail">清理失败,请允许root权限</string>
+    <string name="msg_clear_fail">清理失败</string>
     
     <string name="btn_clear">点击清理</string>
     <string name="btn_clearing" tools:ignore="TypographyEllipsis">正在清理...</string>

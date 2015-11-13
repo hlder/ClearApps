@@ -15,18 +15,15 @@
         android:theme="@style/AppTheme" 
         android:name="com.whereim.clearapps.ClearApplication">
         <activity android:name="com.whereim.clearapps.activity.WelComeActivity">
-        </activity>
-        <activity android:name="com.whereim.clearapps.activity.ClearAppActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+        <activity android:name="com.whereim.clearapps.activity.ClearAppActivity"></activity>
         <activity android:name="com.whereim.clearapps.activity.MainActivity"></activity>
         <activity android:name="com.whereim.clearapps.activity.SettingActivity"></activity>
         <activity android:name="com.whereim.clearapps.activity.WhiteAppActivity"></activity>
-        
         <service android:name="com.whereim.clearapps.service.ClearService"></service>
     </application>
 

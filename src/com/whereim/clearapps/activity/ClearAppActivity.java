@@ -16,6 +16,7 @@ import android.widget.TextView;
 public class ClearAppActivity extends Activity implements EventBusListener{
 	private ClearAnimView clearAnimView;
 	private TextView txtStatus;
+	private String status="";
 	protected void onCreate(android.os.Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_clear);
@@ -38,7 +39,7 @@ public class ClearAppActivity extends Activity implements EventBusListener{
 		@Override
 		public void run() {
 			clearAnimView.stopAnim();
-			txtStatus.setText(""+getString(R.string.toast_clear_success));
+			txtStatus.setText(status);
 		}
 	};
 	
@@ -47,9 +48,9 @@ public class ClearAppActivity extends Activity implements EventBusListener{
 		if(action!=null&& action.equals(EventParams.ACTION_CLEAR_OVER)&&obj instanceof Boolean){
 			runOnUiThread(finshRunnable);
 			if((Boolean) obj){//³É¹¦
-				
+				status=""+getString(R.string.toast_clear_success);
 			}else{//Ê§°Ü
-				
+				status=""+getString(R.string.msg_clear_fail);
 			}
 		}
 	}

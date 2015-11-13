@@ -38,7 +38,7 @@ public class ClearService extends Service{
     	List<String> cmds=new ArrayList<String>();
         for (int i = 0; i < packages.size(); i++) {
         	PackageInfo packageInfo = packages.get(i);
-        	if("com.whereim.clearapps".equals(packageInfo.applicationInfo.packageName)){
+        	if(getPackageName().equals(packageInfo.applicationInfo.packageName)){
         		continue;
         	}
         	if(map.get(packageInfo.applicationInfo.packageName)==null){//不在白名单，需要清理
@@ -50,15 +50,17 @@ public class ClearService extends Service{
 	 private Handler handler=new Handler(){
 	    	public void handleMessage(android.os.Message msg) {
 	    		super.handleMessage(msg);
+	    		boolean flag=true;
 	    		switch (msg.what) {
 				case 0://成功
 					Toast.makeText(ClearService.this, clearSuccess, Toast.LENGTH_SHORT).show();
 					break;
 				case 1://失败
+					flag=false;
 					Toast.makeText(ClearService.this, clearFail, Toast.LENGTH_SHORT).show();
 					break;
 				}
-	    		EventBus.post(EventParams.ACTION_CLEAR_OVER, true);
+	    		EventBus.post(EventParams.ACTION_CLEAR_OVER, flag);
 	    		ClearService.this.stopSelf();
 	    	}
 	    };

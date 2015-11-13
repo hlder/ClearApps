@@ -19,6 +19,7 @@ public class CmdUtils {
 	public static void doCmd(final List<String> cmds,final Handler handler){
 		new Thread(){
 			public void run() {
+				Message msg=handler.obtainMessage();
 				try {
 					Process process=Runtime.getRuntime().exec("su");
 					BufferedReader info=new BufferedReader(new InputStreamReader(process.getInputStream()));
@@ -38,7 +39,10 @@ public class CmdUtils {
 					String errorLine="";
 					do{
 						errorLine=error.readLine();
-						Log.d("dddd", "错误:"+errorLine);
+						Log.d("dddd", "错误:"+errorLine+"结尾");
+						if(!"".equals(errorLine)&&!"null".equals(errorLine)&&!"NULL".equals(errorLine)){
+							throw new IOException();
+						}
 					}while(errorLine!=null);
 					do{
 						line=info.readLine();
@@ -48,23 +52,12 @@ public class CmdUtils {
 					Log.d("dddd", "waitFor");
 					int i=process.waitFor();
 					Log.d("dddd", "执行结果:"+i);
-					Message msg=handler.obtainMessage();
 					msg.what=0;
-					handler.sendMessage(msg);
-					return;
-				} catch (IOException e) {
-					e.printStackTrace();
-				}catch(SecurityException e){
-					e.printStackTrace();
-				}catch(NullPointerException e){
-					e.printStackTrace();
-				}catch(IndexOutOfBoundsException e){
-					e.printStackTrace();
-				} catch (InterruptedException e) {
+				} catch (Exception e) {
+					msg.what=1;
+					Log.e("dddd", ""+e.getLocalizedMessage());
 					e.printStackTrace();
 				}
-				Message msg=handler.obtainMessage();
-				msg.what=1;
 				handler.sendMessage(msg);
 				return;
 			};
