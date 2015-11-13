@@ -39,7 +39,7 @@ public class CmdUtils {
 					String errorLine="";
 					do{
 						errorLine=error.readLine();
-						Log.d("dddd", "¥ÌŒÛ:"+errorLine+"Ω·Œ≤");
+						Log.d("dddd", "¥ÌŒÛ:"+errorLine+"Ω·Œ≤:"+"null".equals(errorLine.trim()));
 						if(!"".equals(errorLine)&&!"null".equals(errorLine)&&!"NULL".equals(errorLine)){
 							throw new IOException();
 						}
