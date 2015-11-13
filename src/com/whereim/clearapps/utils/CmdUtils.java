@@ -22,7 +22,7 @@ public class CmdUtils {
 				try {
 					Process process=Runtime.getRuntime().exec("su");
 					BufferedReader info=new BufferedReader(new InputStreamReader(process.getInputStream()));
-//					BufferedReader error=new BufferedReader(new InputStreamReader(process.getErrorStream()));
+					BufferedReader error=new BufferedReader(new InputStreamReader(process.getErrorStream()));
 					DataOutputStream os = new DataOutputStream(process.getOutputStream());
 					for (int i = 0; i < cmds.size(); i++) {
 						String temp=cmds.get(i);
@@ -35,9 +35,14 @@ public class CmdUtils {
 					os.close();
 					
 					String line="";
+					String errorLine="";
+					do{
+						errorLine=error.readLine();
+						Log.d("dddd", "´íÎó:"+errorLine);
+					}while(errorLine!=null);
 					do{
 						line=info.readLine();
-						Log.d("dddd", "¶ÁÈ¡:"+line);
+						Log.d("dddd", "¶ÁÈ¡info:"+line);
 					}while(line!=null);
 					
 					Log.d("dddd", "waitFor");
