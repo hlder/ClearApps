@@ -23,6 +23,7 @@ public class WelComeActivity extends Activity{
 			public void run() {
 				fristStart();
 				Intent intent=new Intent(WelComeActivity.this,ClearAppActivity.class);
+//				Intent intent=new Intent(WelComeActivity.this,MainActivity.class);
 				startActivity(intent);
 				WelComeActivity.this.finish();
 			};

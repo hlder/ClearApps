@@ -17,5 +17,16 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
         <item name="android:windowNoTitle">true</item>
     </style>
-
+    
+    <style name="line_v">
+        <item name="android:layout_width">match_parent</item>>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">#000000</item>
+    </style>
+    <style name="line_h">
+        <item name="android:layout_width">1px</item>>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#000000</item>
+    </style>
+    
 </resources>

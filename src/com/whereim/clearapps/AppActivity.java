@@ -1,9 +1,9 @@
 package com.whereim.clearapps;
 
-import android.graphics.Color;
 import android.os.Bundle;
 
 import com.fljr.frame.fragment.FragmentActivityFrame;
+import com.whereim.clearapp.R;
 
 public class AppActivity extends FragmentActivityFrame{
 	@Override
@@ -13,6 +13,8 @@ public class AppActivity extends FragmentActivityFrame{
 	@Override
 	public void setTitle(CharSequence title) {
 		super.setTitle(title);
-		setTitleBackgroundColor(Color.parseColor("#15db99"));
+//		setTitleBackgroundColor(Color.parseColor("#15db99"));
+//		setTitleBackgroundColor(R.color.titleView);
+		setTitleBackground(R.color.titleView);
 	}
 }

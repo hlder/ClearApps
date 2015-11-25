@@ -33,6 +33,7 @@ public class WhiteAppActivity extends AppActivity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_white_app);
+		showTitleBackButton();
 		setTitle(getString(R.string.whiteapp));
 		listView=(ListView) findViewById(R.id.listView);
 		textView=(TextView) findViewById(R.id.textView);

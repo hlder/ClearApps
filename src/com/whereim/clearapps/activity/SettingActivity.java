@@ -42,6 +42,7 @@ public class SettingActivity extends AppActivity implements OnClickListener,Even
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_setting);
 		setTitle(getString(R.string.set));
+		showTitleBackButton();
 		titleView=getLayoutInflater().inflate(R.layout.view_app_set_title, null);
 		setTitleRightView(titleView);
 		init();
