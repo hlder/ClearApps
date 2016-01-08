@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.fljr.frame.EventBus;
-import com.fljr.frame.eventbus.EventBusListener;
-import com.fljr.frame.fragment.FragmentTabHostFrame;
+import com.hld.library.frame.EventBus;
+import com.hld.library.frame.eventbus.EventBusListener;
+import com.hld.library.frame.fragment.FragmentTabHostFrame;
 import com.whereim.clearapps.AppActivity;
 import com.whereim.clearapp.R;
 import com.whereim.clearapps.bean.PackageBean;
@@ -36,7 +36,7 @@ public class SettingActivity extends AppActivity implements OnClickListener,Even
 	private AppListFragment allApp;
 	private View titleView;
 	private View btnWhite;
-	private Map<String, PackageBean> whiteApps;//白名单
+	private Map<String, PackageBean> whiteApps;//锟斤拷锟斤拷
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -64,9 +64,9 @@ public class SettingActivity extends AppActivity implements OnClickListener,Even
 		sysApp=new AppListFragment(sysList,whiteApps);
 		
 		tabHost=(FragmentTabHostFrame) findViewById(R.id.tabHost);
-		tabHost.addTab(tabHost.newTabSpec().setIndicator("应用软件"), userApp);
-		tabHost.addTab(tabHost.newTabSpec().setIndicator("系统软件"), sysApp);
-		tabHost.addTab(tabHost.newTabSpec().setIndicator("所有软件"), allApp);
+		tabHost.addTab(tabHost.newTabSpec().setIndicator("搴旂敤杞欢"), userApp);
+		tabHost.addTab(tabHost.newTabSpec().setIndicator("绯荤粺杞欢"), sysApp);
+		tabHost.addTab(tabHost.newTabSpec().setIndicator("鍏ㄩ儴"), allApp);
 		tabHost.setTextSelectedColor(Color.RED);
 	}
 	private Map<String, PackageBean> listToMap(List<PackageBean> list) {
@@ -83,14 +83,14 @@ public class SettingActivity extends AppActivity implements OnClickListener,Even
 		for (int i = 0; i < allList.size(); i++) {
 			PackageInfo info=allList.get(i);
 			if((info.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) == 0) {
-                //非系统应用
+                //锟斤拷系统应锟斤拷
         		if(!"com.whereim.clearapps".equals(info.packageName)){
         			userList.add(info);
         		}else{
         			temp=info;
         		}
             } else {
-                //系统应用
+                //系统应锟斤拷
             	sysList.add(info);
             }
 		}

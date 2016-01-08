@@ -1,9 +1,10 @@
 package com.whereim.clearapps.utils;
 
+import com.hld.library.frame.DBmanager;
+import com.hld.library.frame.db.DbUtils;
+
 import android.content.Context;
 
-import com.fljr.frame.DBmanager;
-import com.fljr.frame.db.DbUtils;
 
 public class DbFactory {
 	public static DbUtils getDb(Context ctx){

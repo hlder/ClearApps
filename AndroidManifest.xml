@@ -25,6 +25,11 @@
         <activity android:name="com.whereim.clearapps.activity.SettingActivity"></activity>
         <activity android:name="com.whereim.clearapps.activity.WhiteAppActivity"></activity>
         <service android:name="com.whereim.clearapps.service.ClearService"></service>
+        
+        <receiver android:name="com.whereim.clearapps.receiver.ScreenOffReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_OFF" />
+            </intent-filter>
+        </receiver>
     </application>
-
 </manifest>

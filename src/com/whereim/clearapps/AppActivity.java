@@ -2,7 +2,7 @@ package com.whereim.clearapps;
 
 import android.os.Bundle;
 
-import com.fljr.frame.fragment.FragmentActivityFrame;
+import com.hld.library.frame.fragment.FragmentActivityFrame;
 import com.whereim.clearapp.R;
 
 public class AppActivity extends FragmentActivityFrame{

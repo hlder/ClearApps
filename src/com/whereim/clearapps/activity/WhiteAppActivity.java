@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.fljr.frame.EventBus;
+import com.hld.library.frame.EventBus;
 import com.whereim.clearapps.AppActivity;
 import com.whereim.clearapp.R;
 import com.whereim.clearapps.adapter.AppListAdapter;
@@ -21,7 +21,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 /**
- * °×Ãûµ¥
+ * ï¿½ï¿½ï¿½ï¿½
  * @author User
  */
 public class WhiteAppActivity extends AppActivity{
@@ -59,7 +59,7 @@ public class WhiteAppActivity extends AppActivity{
 			adapter=new AppListAdapter(this,apps,null);
 			listView.setAdapter(adapter);
 			adapter.setOnClickListener(onClickListener);
-		}else{//ÎÞÊý¾Ý
+		}else{//ï¿½ï¿½ï¿½ï¿½ï¿½
 			listView.setVisibility(View.INVISIBLE);
 			textView.setVisibility(View.VISIBLE);
 		}

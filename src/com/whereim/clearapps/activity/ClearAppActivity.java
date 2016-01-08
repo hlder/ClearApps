@@ -1,7 +1,7 @@
 package com.whereim.clearapps.activity;
 
-import com.fljr.frame.EventBus;
-import com.fljr.frame.eventbus.EventBusListener;
+import com.hld.library.frame.EventBus;
+import com.hld.library.frame.eventbus.EventBusListener;
 import com.whereim.clearapp.R;
 import com.whereim.clearapps.params.EventParams;
 import com.whereim.clearapps.service.ClearService;

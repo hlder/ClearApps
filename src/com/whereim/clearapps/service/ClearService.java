@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.fljr.frame.EventBus;
+import com.hld.library.frame.EventBus;
 import com.whereim.clearapp.R;
 import com.whereim.clearapps.bean.PackageBean;
 import com.whereim.clearapps.params.EventParams;
@@ -41,7 +41,7 @@ public class ClearService extends Service{
         	if(getPackageName().equals(packageInfo.applicationInfo.packageName)){
         		continue;
         	}
-        	if(map.get(packageInfo.applicationInfo.packageName)==null){//²»ÔÚ°×Ãûµ¥£¬ÐèÒªÇåÀí
+        	if(map.get(packageInfo.applicationInfo.packageName)==null){//ï¿½ï¿½ï¿½Ú°ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
         		cmds.add("am force-stop "+packageInfo.packageName+" \n");
         	}
 		}
@@ -52,10 +52,10 @@ public class ClearService extends Service{
 	    		super.handleMessage(msg);
 	    		boolean flag=true;
 	    		switch (msg.what) {
-				case 0://³É¹¦
+				case 0://ï¿½É¹ï¿½
 					Toast.makeText(ClearService.this, clearSuccess, Toast.LENGTH_SHORT).show();
 					break;
-				case 1://Ê§°Ü
+				case 1://Ê§ï¿½ï¿½
 					flag=false;
 					Toast.makeText(ClearService.this, clearFail, Toast.LENGTH_SHORT).show();
 					break;

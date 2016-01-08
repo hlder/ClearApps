@@ -14,9 +14,9 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.fljr.frame.EventBus;
-import com.fljr.frame.Fragment;
-import com.fljr.frame.eventbus.EventBusListener;
+import com.hld.library.frame.EventBus;
+import com.hld.library.frame.Fragment;
+import com.hld.library.frame.eventbus.EventBusListener;
 import com.whereim.clearapp.R;
 import com.whereim.clearapps.adapter.AppListAdapter;
 import com.whereim.clearapps.bean.PackageBean;
@@ -28,7 +28,7 @@ public class AppListFragment extends Fragment implements EventBusListener{
 	private ListView listView;
 	private AppListAdapter adapter;
 
-	private Map<String, PackageBean> whiteApps;//°×Ãûµ¥
+	private Map<String, PackageBean> whiteApps;//ï¿½ï¿½ï¿½ï¿½
 	
 	public AppListFragment(List<PackageInfo> list,Map<String, PackageBean> whiteApps) {
 		this.list=list;
@@ -48,14 +48,14 @@ public class AppListFragment extends Fragment implements EventBusListener{
 	
 	private OnClickListener onClickListener=new OnClickListener() {
 		@Override
-		public void onClick(View v) {//Ìí¼Ó»òÈ¡Ïû°×Ãûµ¥
+		public void onClick(View v) {//ï¿½ï¿½Ó»ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½
 			if(v.getTag()==null){
 				return;
 			}
 			PackageInfo info=(PackageInfo) v.getTag();
 			PackageBean bean = whiteApps.get(info.applicationInfo.packageName);
-			if(bean!=null){//´æÔÚ°×Ãûµ¥
-				//´Ó°×Ãûµ¥ÖÐÒÆ³ý
+			if(bean!=null){//ï¿½ï¿½ï¿½Ú°ï¿½ï¿½ï¿½
+				//ï¿½Ó°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ³ï¿½
 				DbFactory.getDb(getActivity()).deleteByWhere(PackageBean.class, "packageName='"+bean.getPackageName()+"'");
 				whiteApps.remove(bean.getPackageName());
 				
